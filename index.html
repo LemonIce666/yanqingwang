@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,37 +8,67 @@
        .inline-container {
             display: flex;
             align-items: center;
+            justify-content: space-between;
         }
-        
+
         #sls {
             width: 300px;
-            
         }
         #centre {
-                width: 90%;
-                /* margin: 0% 17.5% 0% 17.5%; */
-                margin: 0 auto;
+            width: 90%;
+            margin: 0 auto;
         }
-        #color{
-            color:blueviolet;
-            /* text-decoration:none; */
+        #color {
+            color: blueviolet;
         }
-        #colorr{
-            color:blue;
-            /* text-decoration:none; */
+        #colorr {
+            color: blue;
         }
-        /* a {
-       text-decoration: none;
-   } */
-   table {
+
+        /* 语言切换按钮样式 */
+        .lang-switch {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            display: flex;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .lang-switch a {
+            padding: 8px 16px;
+            font-size: 14px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* 中文按钮 */
+        .lang-switch .cn {
+            background-color: #333;
+            color: white;
+            border-right: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* 法文按钮 */
+        .lang-switch .fr {
+            background-color: white;
+            color: #333;
+        }
+
+        /* 悬停效果 */
+        .lang-switch .fr:hover {
+            background-color: #f0f0f0;
+        }
+
+        table {
             border-collapse: collapse;
             width: 100%;
             margin-top: 20px;
             border: 1px solid #ddd;
         }
 
-        th,
-        td {
+        th, td {
             border: 1px solid #ddd;
             padding: 10px;
             text-align: left;
@@ -48,53 +78,59 @@
             background-color: #f9f9f9;
             font-weight: bold;
         }
-  
     </style>
 </head>
 <body>
     <div id="centre">
-    <div   class="inline-container">
-        <img src="https://www.helloimg.com/i/2024/09/28/66f8080c10896.jpg" width="100px">
-        <h1>延晴网——杜总的专属恋爱平台</h1>
+        <div class="inline-container">
+            <div>
+                <img src="https://www.helloimg.com/i/2024/09/28/66f8080c10896.jpg" width="100px">
+                <h1>延晴网——杜总的专属恋爱平台</h1>
+            </div>
+            <!-- 语言切换按钮 -->
+            <div class="lang-switch">
+                <a href="#" class="cn">中文</a> <!-- 当前页面是中文，中文为深色 -->
+                <a href="https://lemonice666.github.io/test/" class="fr">Français</a> <!-- 法文为浅色 -->
+            </div>
+        </div>
+        
+        <h2>关于我</h2>
+        <p>杜纪霖，男，汉族，2004年1月生，辽宁抚顺人，入党积极分子，国际卓越工程师学院2022级本科生。曾任国卓2202班团委宣传委员、国卓学院团委宣传部负责人，国卓学院学生会主席团成员分管信传和文艺部，校团委学术科创部成员。曾获华东理工大学2023年度优秀团干部、2022年度优秀团员、“互联网+”大赛校级三等奖、校级三等奖学金、全国大学生英语作文大赛省级二等奖、第一届国际大学生英语翻译挑战赛一等奖、交大水平考试A等、社会工作奖B、C等等荣誉。</p>
+
+        <h2>我的名言</h2>
+        <p><span id="colorr">没尘埃落定呢！</span></p> 
+        <span id="colorr">人性的温暖是不分国界的，贴心的话语是无谓语言的。</span> 
+        <p><span id="colorr">去年以为那拉提已经很美了，直到我去了库尔德宁🌲,遇见了延晴❤️</span></p> 
+
+        <hr>
+        <table border="1px" cellspacing="0">
+            <tr>
+                <th> 我的世界时间线 </th>
+                <th> 我的穷游地点【点击查看我的美丽瞬间】</th>
+            </tr>
+            <tr>
+                <td>2023.12.2</td>
+                <td><a href="https://www.helloimg.com/i/2024/09/29/66f943742ea9c.jpeg"><span id="color">被白人大妈搭救，感悟人性光辉--越南·富国岛</span></a></td>
+            </tr>
+            <tr>
+                <td>2024.1.24</td>
+                <td><a href="https://www.helloimg.com/i/2024/09/29/66f943ea6eea7.jpeg"><span id="color">落地大马看病日常--马来西亚·吉隆坡</span></a></td>
+            </tr>
+            <tr>
+                <td>2024.1.26</td>
+                <td><a href="https://www.helloimg.com/i/2024/09/29/66f94439de5c7.jpeg"><span id="color">睁眼做梦圣地--柬埔寨·暹粒</span></a></td>
+            </tr>
+        </table>
+        <hr>
+        <script src="https://fast.wistia.com/embed/medias/uos6fsk1qi.jsonp" async></script>
+        <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+        <div class="wistia_embed wistia_async_uos6fsk1qi seo=true videoFoam=false" style="height:513px;position:relative;width:300px">
+            <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
+                <img src="https://fast.wistia.com/embed/medias/uos6fsk1qi/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" />
+            </div>
+        </div>
+        <hr>
+        <a href="https://qr.alipay.com/fkx104304ikqovauxvpog30">若您喜欢本网页，请点此为dz的抵法与相亲事业进行赞助，感谢您的支持！</a>
     </div>
-    <h2>关于我</h2>
-    <p>杜纪霖，男，汉族，2004年1月生，辽宁抚顺人，入党积极分子，国际卓越工程师学院2022级本科生。曾任国卓2202班团委宣传委员、国卓学院团委宣传部负责人，国卓学院学生会主席团成员分管信传和文艺部，校团委学术科创部成员。曾获华东理工大学2023年度优秀团干部、2022年度优秀团员、“互联网+”大赛校级三等奖、校级三等奖学金、全国大学生英语作文大赛省级二等奖、第一届国际大学生英语翻译挑战赛一等奖、交大水平考试A等、社会工作奖B、C等等荣誉。</p>
-<!-- <a href=" https://lemonice666.github.io/test/">-->
-    <h2>我的名言</h2>
-    <p><span id="colorr">没尘埃落定呢！</span></a> </p> 
-    <span id="colorr">人性的温暖是不分国界的，贴心的话语是无谓语言的。</span></a> 
-   <p><span id="colorr">去年以为那拉提已经很美了，直到我去了库尔德宁🌲,遇见了延晴❤️</span></a> </p> 
-   
-    <hr>
-    <table border="1px" cellspacing="0">
-       <tr>
-        <th> 我的世界时间线 </th>
-        <th> 我的穷游地点【点击查看我的美丽瞬间】</th>
-       </tr>
-       
-
-
-<tr>
-    <td>2023.12.2</td>
-    <td><a href="https://www.helloimg.com/i/2024/09/29/66f943742ea9c.jpeg"><span id="color">被白人大妈搭救，感悟人性光辉--越南·富国岛</span></a></td>
-</tr>
-
-<tr>
-    <td>2024.1.24</td>
-    <td><a href=" https://www.helloimg.com/i/2024/09/29/66f943ea6eea7.jpeg"><span id="color">落地大马看病日常--马来西亚·吉隆坡</span></a></td>
-</tr>
-
-<tr>
-    <td> 2024.1.26</td>
-    <td> <a href="https://www.helloimg.com/i/2024/09/29/66f94439de5c7.jpeg"><span id="color">睁眼做梦圣地--柬埔寨·暹粒</span></a></td>
-</tr>
-
-    </table>
-    <hr>
-    <script src="https://fast.wistia.com/embed/medias/uos6fsk1qi.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_embed wistia_async_uos6fsk1qi seo=true videoFoam=false" style="height:513px;position:relative;width:300px"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/uos6fsk1qi/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" /></div></div>
-    <hr>
-    <a href="https://qr.alipay.com/fkx104304ikqovauxvpog30">若您喜欢本网页，请点此为dz的抵法与相亲事业进行赞助，感谢您的支持！</a>
-    </div>
-   
 </body>
 </html>
